@@ -17,8 +17,8 @@ var resultPages = {
   "romeoAndJulietVideos" : ["1", "2", "12", "13"],
   "blackFlags" : ["01w", "03w", "05w", "08w", "14w", "16w", "20w", "22w"],
   "blackFlagsVideos" : ["0", "1", "2", "3"],
-  "rozaParks" : ["05w", "07w", "11w", "15w", "18w", "19w", "20w", "24w"],
-  "rozaParksVideos" : ["0", "1", "10", "13", "14"],
+  "rosaParks" : ["05w", "07w", "11w", "15w", "18w", "19w", "20w", "24w"],
+  "rosaParksVideos" : ["0", "1", "10", "13", "14"],
   "cotege" : ["01w", "03w", "04w", "14w", "16w", "17w",],
   "cotegeVideos" : ["0", "1", "2", "3", "13", "14"],
   "arabSpring" : ["03w", "04w", "05w", "06w", "07w", "11w", "13w", "20w",],
@@ -48,7 +48,7 @@ var resultPages = {
 var descriptions = {
   "romeoAndJuliet" : "מרד שהתפרץ על רקע אישי, משפחתי ורומנטי.",
   "blackFlags" : "מרד על רקע חברתי, פוליטי וכלכל. מחאה כלל ארצית כנגד ראש הממשלה.",
-  "rozaParks" : "כשאישה לא מוכנה לקבל חוסר שיוויון חברתי על בסיס צבע עור.",
+  "rosaParks" : "כשאישה לא מוכנה לקבל חוסר שיוויון חברתי על בסיס צבע עור.",
   "cotege" : "התנגדות ליוקר המחייה ומאבק בזכות לקיום בסיסי בכבוד.",
   "arabSpring" : "מהפכה חוצית מדינות כנגד שחיתות שלטונית, זכויות היסוד של האזרחים, והתנגדות לשלטון טוטליטרי.",
   "hippies" : "מרד הקורא נגד מלחמה, אלימות, שמרנות וצרכנות. אמונה בטבע האדם, במוזיקה, ובאהבה.",
@@ -62,13 +62,13 @@ var descriptions = {
   "studentsFrance" : "",
   "partizans" : "התנגדות אמיצה של מעטים מול רבים, למען הצלת האחר גם במחיר של הקרבה עצמית."
 }
-var hebrewNames = {"romeoAndJuliet" : "רומיאו,ויוליה", "blackFlags" : "הדגלים,השחורים", "rozaParks" : "רוזה,פארקס",
+var hebrewNames = {"romeoAndJuliet" : "רומיאו,ויוליה", "blackFlags" : "הדגלים,השחורים", "rosaParks" : "רוזה,פארקס",
 "cotege" : "מחאת,הקוטג׳", "arabSpring" : "האביב,הערבי", "hippies" : "ילדי,הפרחים", "king" : "מרתין,לותר קינג", 
 "teen" : "מרד,נעורים", "robinHood" : "רובין,הוד", "lgbt" : "מחאת,הלהט״ב", "adam" : "אדם,וחווה", 
 "suffragette" : "<br/>סופרג׳יזם", "sparta" : "<br/>ספרטה", "studentsFrance" : "מאי,1968", "partizans" : "<br/>פרטיזנים"};
 var frames = {"romeoAndJuliet" : [RED, RED, RED, PINK, PINK, GREEN, GREEN, ORANGE, ORANGE, ORANGE, ORANGE, ORANGE, ORANGE, ORANGE, YELLOW],
               "blackFlags" : [BLUE, BLUE, RED, RED, BLUE, PINK, PINK, WHITE, WHITE, WHITE, BLUE, BLUE, BLUE, WHITE, YELLOW],
-              "rozaParks" : [RED, RED, PINK, PINK, WHITE, WHITE, WHITE, WHITE, WHITE, GREEN, ORANGE, YELLOW, YELLOW, BLUE, BLUE],
+              "rosaParks" : [RED, RED, PINK, PINK, WHITE, WHITE, WHITE, WHITE, WHITE, GREEN, ORANGE, YELLOW, YELLOW, BLUE, BLUE],
               "cotege" : [RED, RED, RED, RED, PINK, WHITE, WHITE, WHITE, WHITE, WHITE, WHITE, WHITE, BLUE, BLUE, BLUE],
               "arabSpring" : [YELLOW, PINK, BLUE, YELLOW, PINK, GREEN, PINK, BLUE, BLUE, BLUE, ORANGE, YELLOW, BLUE, PINK, BLUE],
               "hippies" : [ORANGE, PURPLE, WHITE, PINK, YELLOW, PINK, PURPLE, WHITE, WHITE, ORANGE, ORANGE, PINK, PURPLE, PURPLE, WHITE],
@@ -83,7 +83,7 @@ var frames = {"romeoAndJuliet" : [RED, RED, RED, PINK, PINK, GREEN, GREEN, ORANG
               "partizans" : [BLUE, BLUE, GREEN, ORANGE, WHITE, RED, PURPLE, WHITE, RED, WHITE, PINK, PINK, WHITE, PINK, WHITE]
 };
 var activeBtns = [];
-var matches = ["romeoAndJuliet", "blackFlags", "rozaParks", "cotege", "arabSpring", "hippies", "king", "teen",
+var matches = ["romeoAndJuliet", "blackFlags", "rosaParks", "cotege", "arabSpring", "hippies", "king", "teen",
 "robinHood", "lgbt", "adam", "suffragette", "sparta", "studentsFrance", "partizans"];
 let body = document.getElementsByTagName("BODY")[0];
 body.style.overflow = "hidden";
