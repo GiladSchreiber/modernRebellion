@@ -45,11 +45,11 @@ var resultPages = {
   }
 
 var descriptions = {
-  "romeoAndJuliet" : "מרד שהתפרץ על רקע אישי, משפחתי ורומנטי.",
-  "blackFlags" : "מרד על רקע חברתי, פוליטי וכלכל. מחאה כלל ארצית כנגד ראש הממשלה.",
-  "rosaParks" : "כשאישה לא מוכנה לקבל חוסר שיוויון חברתי על בסיס צבע עור.",
+  "romeoAndJuliet" : "מרד רומנטי של זוג מול משפחותיהם היהירות, שבירת מסגרות נוקשות ושמרניות והקרבה עצמית למען האהבה.",
+  "blackFlags" : "כשציבור מחליט לקום ולהפגין מדי יום ביומו, באזורים נרחבים ברחבי הארץ, לסיום כהונתו הארוכה של ראש הממשלה.",
+  "rosaParks" : "כשאישה מחליטה לקום ולעשות מעשה, או יותר נכון לשבת, אל מול חוסר צדק ושיוויון חברתי על בסיס צבע עור וגזע.",
   "cotege" : "התנגדות ליוקר המחייה ומאבק בזכות לקיום בסיסי בכבוד.",
-  "arabSpring" : "מהפכה חוצית מדינות כנגד שחיתות שלטונית, זכויות היסוד של האזרחים, והתנגדות לשלטון טוטליטרי.",
+  "arabSpring" : "מהפכה חוצית מדינות כנגד שחיתות שלטונית, זכויות היסוד ואורח החיים של האזרחים, והתנגדות לשלטון טוטליטרי.",
   "hippies" : "מרד הקורא נגד מלחמה, אלימות, שמרנות וצרכנות. אמונה בטבע האדם, במוזיקה, ובאהבה.",
   "king" : "סירוב לקבל אפליה על רקע גזעי, מלחמה על זכויות החופש הבסיסיות של כל אדם באשר הוא.",
   "teen" : "",
@@ -59,7 +59,7 @@ var descriptions = {
   "suffragette" : "כשקהילת נשים יוצאת נגד חוסר שיוויון מגדרי, ועושה היסטוריה.",
   "sparta" : "מלחמתו של עם עיקש, חזק ואמיץ למול כובשים גדולים בהרבה, ואימוץ אורח חיים ייחודי וקיצוני משאר המדינה.",
   "studentsFrance" : "",
-  "partizans" : "התנגדות אמיצה של מעטים מול רבים, למען הצלת האחר גם במחיר של הקרבה עצמית."
+  "partizans" : "התנגדות של מעטים מול רבים, עם אמצעים דלים ונחישות אדירה, למען הצלת האחר גם במחיר של הקרבה עצמית."
 }
 var hebrewNames = {"romeoAndJuliet" : "רומיאו,ויוליה", "blackFlags" : "הדגלים,השחורים", "rosaParks" : "רוזה,פארקס",
 "cotege" : "מחאת,הקוטג׳", "arabSpring" : "האביב,הערבי", "hippies" : "ילדי,הפרחים", "king" : "מרתין,לותר קינג", 
@@ -175,6 +175,8 @@ function pxTOvh(value) {
   return (100*value)/y;
 }
 
+// alert(vhTOpx(14));
+
 function toggleObject(id) {
     let indexInArray = activeBtns.indexOf(id);
     if (indexInArray > -1) {
@@ -286,8 +288,8 @@ function setResultHeaders(percentage, rabelName) {
       document.getElementById("rabelName1").innerHTML = currentStr[0];
       document.getElementById("rabelName2").innerHTML = currentStr[1];
     } else {
-      document.getElementById("rabelName1").innerHTML = hebrewNames[rabelName];
-      document.getElementById("rabelName2").innerHTML = "";
+      document.getElementById("rabelName2").innerHTML = hebrewNames[rabelName];
+      document.getElementById("rabelName1").innerHTML = "";
     }
     document.getElementById("description").innerHTML = descriptions[rabelName];
 }

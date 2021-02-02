@@ -52,7 +52,7 @@ html {
 	font-family: 'Danidin Stencil';
 	font-weight: 800;
 	font-size: 100pt;
-	line-height: 14vh;
+	line-height: 118px;
 	text-align: right;
 }
 
@@ -71,8 +71,7 @@ html {
   height: 100%;
   position: fixed;
   pointer-events: none;
-  z-index: 9999;
-  mix-blend-mode: multiply;
+  z-index: 1;
 }
 
 #buttonsContainer {
@@ -137,6 +136,7 @@ input[type="image"]:focus {
 }
 
 #description {
+  padding-top: 10px;
   font-family: 'Danidin';
   font-weight: Bolder;
   font-size: 15pt;
@@ -299,6 +299,7 @@ button:focus {
 
 
 line {
-  stroke: yellow;
+  stroke: blue;
   stroke-width: 3px;
+  z-index: 1;
 }
