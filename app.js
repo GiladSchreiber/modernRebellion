@@ -14,13 +14,13 @@ var currentMatch = "romeoAndJuliet";
 var currentItem = "";
 var resultPages = {
   "romeoAndJuliet" : ["04w", "07w", "09w", "10w", "11w", "13w", "15w", "21w",], 
-  "romeoAndJulietVideos" : ["1", "2", "14", "15"],
+  "romeoAndJulietVideos" : ["1", "2", "12", "13"],
   "blackFlags" : ["01w", "03w", "05w", "08w", "14w", "16w", "20w", "22w"],
   "blackFlagsVideos" : ["0", "1", "2", "3"],
   "rozaParks" : ["05w", "07w", "11w", "15w", "18w", "19w", "20w", "24w"],
-  "rozaParksVideos" : [],
+  "rozaParksVideos" : ["0", "1", "10", "13", "14"],
   "cotege" : ["01w", "03w", "04w", "14w", "16w", "17w",],
-  "cotegeVideos" : [],
+  "cotegeVideos" : ["0", "1", "2", "3", "13", "14"],
   "arabSpring" : ["03w", "04w", "05w", "06w", "07w", "11w", "13w", "20w",],
   "arabSpringVideos" : ["2", "3", "6", "9", "10", "13", "14"],
   "hippies" : ["02w", "06w", "09w", "10w", "11w", "14w", "17w", "21w", "22w", "23w"], 
@@ -48,8 +48,8 @@ var resultPages = {
 var descriptions = {
   "romeoAndJuliet" : "מרד שהתפרץ על רקע אישי, משפחתי ורומנטי.",
   "blackFlags" : "מרד על רקע חברתי, פוליטי וכלכל. מחאה כלל ארצית כנגד ראש הממשלה.",
-  "rozaParks" : "",
-  "cotege" : "",
+  "rozaParks" : "כשאישה לא מוכנה לקבל חוסר שיוויון חברתי על בסיס צבע עור.",
+  "cotege" : "התנגדות ליוקר המחייה ומאבק בזכות לקיום בסיסי בכבוד.",
   "arabSpring" : "מהפכה חוצית מדינות כנגד שחיתות שלטונית, זכויות היסוד של האזרחים, והתנגדות לשלטון טוטליטרי.",
   "hippies" : "מרד הקורא נגד מלחמה, אלימות, שמרנות וצרכנות. אמונה בטבע האדם, במוזיקה, ובאהבה.",
   "king" : "סירוב לקבל אפליה על רקע גזעי, מלחמה על זכויות החופש הבסיסיות של כל אדם באשר הוא.",
@@ -62,16 +62,14 @@ var descriptions = {
   "studentsFrance" : "",
   "partizans" : "התנגדות אמיצה של מעטים מול רבים, למען הצלת האחר גם במחיר של הקרבה עצמית."
 }
-var hebrewNames = {"romeoAndJuliet" : "רומיאו ויוליה", "blackFlags" : "הדגלים השחורים", "rozaParks" : "רוזה פארקס",
-"cotege" : "מחאת הקוטג׳", "arabSpring" : "האביב הערבי", "hippies" : "ילדי הפרחים", "king" : "מרתין לותר קינג", 
-"teen" : "מרד נעורים", "robinHood" : "רובין,הוד", "lgbt" : "מחאת הלהט״ב", "adam" : "אדם,וחווה", 
+var hebrewNames = {"romeoAndJuliet" : "רומיאו,ויוליה", "blackFlags" : "הדגלים,השחורים", "rozaParks" : "רוזה,פארקס",
+"cotege" : "מחאת,הקוטג׳", "arabSpring" : "האביב,הערבי", "hippies" : "ילדי,הפרחים", "king" : "מרתין,לותר קינג", 
+"teen" : "מרד,נעורים", "robinHood" : "רובין,הוד", "lgbt" : "מחאת,הלהט״ב", "adam" : "אדם,וחווה", 
 "suffragette" : "<br/>סופרג׳יזם", "sparta" : "<br/>ספרטה", "studentsFrance" : "מאי,1968", "partizans" : "<br/>פרטיזנים"};
-var frames = {"romeoAndJuliet" : [RED, RED, RED, PINK, PINK, GREEN, GREEN, ORANGE, 
-                                  ORANGE, ORANGE, ORANGE, ORANGE, ORANGE, ORANGE, 
-                                  ORANGE, ORANGE, PURPLE, YELLOW],
+var frames = {"romeoAndJuliet" : [RED, RED, RED, PINK, PINK, GREEN, GREEN, ORANGE, ORANGE, ORANGE, ORANGE, ORANGE, ORANGE, ORANGE, YELLOW],
               "blackFlags" : [BLUE, BLUE, RED, RED, BLUE, PINK, PINK, WHITE, WHITE, WHITE, BLUE, BLUE, BLUE, WHITE, YELLOW],
-              "rozaParks" : [],
-              "cotege" : [],
+              "rozaParks" : [RED, RED, PINK, PINK, WHITE, WHITE, WHITE, WHITE, WHITE, GREEN, ORANGE, YELLOW, YELLOW, BLUE, BLUE],
+              "cotege" : [RED, RED, RED, RED, PINK, WHITE, WHITE, WHITE, WHITE, WHITE, WHITE, WHITE, BLUE, BLUE, BLUE],
               "arabSpring" : [YELLOW, PINK, BLUE, YELLOW, PINK, GREEN, PINK, BLUE, BLUE, BLUE, ORANGE, YELLOW, BLUE, PINK, BLUE],
               "hippies" : [ORANGE, PURPLE, WHITE, PINK, YELLOW, PINK, PURPLE, WHITE, WHITE, ORANGE, ORANGE, PINK, PURPLE, PURPLE, WHITE],
               "king" : [RED, YELLOW, BLUE, PINK, BLUE, PINK, RED, RED, PINK, BLUE, BLUE, GREEN, RED, PURPLE, PURPLE],
@@ -280,11 +278,11 @@ var resDesc = document.getElementById("resDesc");
 var menu = document.getElementById("menu");
 var cover = document.getElementById("cover");
 
-let twoLinesHeaders = ["robinHood", "adam", "studentsFrance"];
+let oneLineHeaders = ["partizans", "suffragette", "sparta"];
 function setResultHeaders(percentage, rabelName) {
     var roundPercentage = Math.round(percentage * 100);
     document.getElementById("percentage").innerHTML = "את.ה " + roundPercentage + "%";
-    if (twoLinesHeaders.includes(currentMatch)) {
+    if (!oneLineHeaders.includes(currentMatch)) {
       let currentStr = hebrewNames[rabelName].split(",");
       document.getElementById("rabelName1").innerHTML = currentStr[0];
       document.getElementById("rabelName2").innerHTML = currentStr[1];
