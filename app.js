@@ -6,7 +6,6 @@ var PINK = '#ff00e1';
 var RED = '#ff002b';
 var ORANGE = '#ff8f02';
 var YELLOW = '#ffff03';
-
 var initialColors = [GREEN, BLUE, PURPLE, PINK, RED, ORANGE, YELLOW, WHITE];
 var initialText = ["ספרים", "חדשות", "מוזיקה", "אמנות", "וידאו", "סרט", "מיקום", "אחר"];
 
@@ -14,7 +13,7 @@ var currentMatch = "romeoAndJuliet";
 var currentItem = "";
 var resultPages = {
   "romeoAndJuliet" : ["04w", "07w", "09w", "10w", "11w", "13w", "15w", "21w",], 
-  "romeoAndJulietVideos" : ["1", "2", "12", "13"],
+  "romeoAndJulietVideos" : ["0", "1", "2", "12", "13"],
   "blackFlags" : ["01w", "03w", "05w", "08w", "14w", "16w", "20w", "22w"],
   "blackFlagsVideos" : ["0", "1", "2", "3"],
   "rosaParks" : ["05w", "07w", "11w", "15w", "18w", "19w", "20w", "24w"],
@@ -56,7 +55,7 @@ var descriptions = {
   "teen" : "",
   "robinHood" : "אומץ לב ואמונה בשיוויון וצדקם של חלשים, גם במחיר של שבירת חוקים ומסגרות.",
   "lgbt" : "מאבק נגד חוקי ממשלה שמרנים המונעים שיוויון לכלל האזרחים על בסיס הנטייה המינית שלהם.",
-  "adam" : "מרד אישי, אי קבלת מרות, פיתוי ושבירת חוקים ומוסכמות, גם במחיר כבד מאוד.",
+  "adam" : "מרד אישי, אי קבלת מרות, פיתוי ושבירת חוקים ומוסכמות, וזאת מבלי לדעת מה יהיו ההשלכות של החלטה שכזאת.",
   "suffragette" : "כשקהילת נשים יוצאת נגד חוסר שיוויון מגדרי, ועושה היסטוריה.",
   "sparta" : "מלחמתו של עם עיקש, חזק ואמיץ למול כובשים גדולים בהרבה, ואימוץ אורח חיים ייחודי וקיצוני משאר המדינה.",
   "studentsFrance" : "",

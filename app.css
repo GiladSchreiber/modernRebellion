@@ -125,7 +125,7 @@ input[type="image"]:focus {
   font-family: 'Danidin';
   font-weight: 900;
   font-size: 35pt;
-  line-height: 8vh;
+  line-height: 67px;
 }
 
 .rabelName {
@@ -133,14 +133,16 @@ input[type="image"]:focus {
   font-family: 'Danidin Stencil';
   font-weight: 800;
   font-size: 100pt;
-  line-height: 12vh;
+  line-height: 100px;
 }
 
 #description {
   font-family: 'Danidin';
-  font-weight: 900;
+  font-weight: Bolder;
   font-size: 15pt;
   direction: rtl;
+  max-width: 32vw; 
+
 }
 
 .item {
