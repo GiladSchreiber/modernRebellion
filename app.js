@@ -12,33 +12,31 @@ var initialText = ["ספרים", "חדשות", "מוזיקה", "אמנות", "ו
 var currentMatch = "romeoAndJuliet";
 var currentItem = "";
 var resultPages = {
-  "romeoAndJuliet" : ["04w", "07w", "09w", "10w", "11w", "13w", "15w", "21w",], 
+  "romeoAndJuliet" : ["04w", "09w", "10w", "13w", "21w",], 
   "romeoAndJulietVideos" : ["0", "1", "2", "12", "13"],
-  "blackFlags" : ["01w", "03w", "05w", "08w", "14w", "16w", "20w", "22w"],
+  "blackFlags" : ["01w", "03w", "16w", "20w", "22w"],
   "blackFlagsVideos" : ["0", "1", "2", "3"],
-  "rosaParks" : ["05w", "07w", "11w", "15w", "18w", "19w", "20w", "24w"],
+  "rosaParks" : ["05w", "07w", "11w", "18w", "19w", "20w"],
   "rosaParksVideos" : ["0", "1", "10", "13", "14"],
   "cotege" : ["01w", "03w", "04w", "14w", "16w", "17w",],
   "cotegeVideos" : ["0", "1", "2", "3", "13", "14"],
-  "arabSpring" : ["03w", "04w", "05w", "06w", "07w", "11w", "13w", "20w",],
+  "arabSpring" : ["03w", "05w", "06w", "11w", "20w",],
   "arabSpringVideos" : ["2", "3", "6", "9", "10", "13", "14"],
-  "hippies" : ["02w", "06w", "09w", "10w", "11w", "14w", "17w", "21w", "22w", "23w"], 
+  "hippies" : ["02w", "09w", "10w", "21w", "22w", "23w"], 
   "hippiesVideos" : ["0", "3", "6", "9", "10", "12", "13"],
-  "king" : ["05w", "06w", "10w", "18w", "19w",],
+  "king" : ["05w", "06w", "10w", "19w",],
   "kingVideos" : ["0", "1", "6", "7", "12", "13", "14"],
-  "teen" : ["02w", "06w", "08w", "12w", "13w", "21w"],
-  "teenVideos" : [],
-  "robinHood" : ["01w", "03w", "05w", "07w", "11w", "12w", "14w", "17w",],
+  "robinHood" : ["01w", "03w", "05w", "12w", "14w", "17w",],
   "robinHoodVideos" : ["0", "1", "2", "3", "5", "6", "10"],
-  "lgbt" : ["04w", "05w", "06w", "07w", "10w", "11w", "16w", "23w"], 
+  "lgbt" : ["05w", "06w", "07w", "10w", "16w", "23w"], 
   "lgbtVideos" : ["2", "4", "5", "7", "9", "10", "14"],
-  "adam" : ["02w", "04w", "06w", "08w", "10w", "12w", "15w", "21w"],
+  "adam" : ["02w", "06w", "08w","12w", "15w", "21w"],
   "adamVideos" : ["1", "2", "3", "4", "5", "8", "9", "11", "12"],
   "suffragette" : ["04w", "05w", "10w", "15w", "20w", "24w"],
   "suffragetteVideos" : ["1", "2", "3", "9", "10", "11", "12"],
-  "sparta" : ["02w", "05w", "07w", "08w", "09w", "13w", "24w"],
+  "sparta" : ["02w", "05w", "07w", "08w", "13w"],
   "spartaVideos" : ["1", "3", "4", "5", "6"],
-  "partizans" : ["02w", "04w", "07w", "09w", "11w", "13w", "19w", "23w", "23w"],
+  "partizans" : ["02w", "09w", "11w", "19w", "23w", "23w"],
   "partizansVideos" : ["3", "5", "6", "7", "8", "9"]
   }
 
@@ -50,7 +48,6 @@ var descriptions = {
   "arabSpring" : "מהפכה חוצת מדינות כנגד שחיתות שלטונית, זכויות היסוד ואורח החיים של האזרחים, והתנגדות לשלטון טוטליטרי.",
   "hippies" : "מרד הקורא נגד מלחמה, שמרנות וצרכנות. אמונה בטבע הטוב של האדם, במוזיקה חוצת גבולות, ובאהבה מינית ורומנטית.",
   "king" : "סירוב לקבל אפליה על רקע גזעי, מלחמה על זכויות החופש הבסיסיות של כל אדם באשר הוא, ויוצרת מחאה בכוח המילה.",
-  "teen" : "",
   "robinHood" : "לקיחת החוק לידיים ויצירת צדק חברתי וקהילתי אלטרנטיבי, לטובת מענק הזדמנויות שווה לכל שכבות האוכלוסיה.",
   "lgbt" : "מאבק של קהילה ותומכיה כנגד חוקי ממשלה שמרנים המונעים שיוויון לכלל האזרחים על בסיס הנטייה מינית.",
   "adam" : "מרד אישי, אי קבלת מרות, פיתוי ושבירת חוקים ומוסכמות, וזאת מבלי לדעת מה יהיו ההשלכות של החלטה שכזאת.",
@@ -60,7 +57,7 @@ var descriptions = {
 }
 var hebrewNames = {"romeoAndJuliet" : "רומיאו,ויוליה", "blackFlags" : "הדגלים,השחורים", "rosaParks" : "רוזה,פארקס",
 "cotege" : "מחאת,הקוטג׳", "arabSpring" : "האביב,הערבי", "hippies" : "ילדי,הפרחים", "king" : "ד״ר מרטין,לותר קינג", 
-"teen" : "מרד,נעורים", "robinHood" : "רובין,הוד", "lgbt" : "מחאת,הלהט״ב", "adam" : "אדם,וחווה", 
+"robinHood" : "רובין,הוד", "lgbt" : "מחאת,הלהט״ב", "adam" : "אדם,וחווה", 
 "suffragette" : "תנועת,הסופרג׳יזם", "sparta" : "הצבא,הספרטני", "partizans" : "מחתרת,הפרטיזנים"};
 var frames = {"romeoAndJuliet" : [RED, RED, RED, PINK, PINK, GREEN, GREEN, ORANGE, ORANGE, ORANGE, ORANGE, ORANGE, ORANGE, ORANGE, YELLOW],
               "blackFlags" : [RED, RED, RED, RED, BLUE, PINK, PINK, WHITE, WHITE, WHITE, BLUE, BLUE, BLUE, WHITE, YELLOW],
@@ -69,7 +66,6 @@ var frames = {"romeoAndJuliet" : [RED, RED, RED, PINK, PINK, GREEN, GREEN, ORANG
               "arabSpring" : [YELLOW, PINK, BLUE, YELLOW, PINK, GREEN, PINK, BLUE, BLUE, BLUE, ORANGE, YELLOW, BLUE, PINK, BLUE],
               "hippies" : [ORANGE, PURPLE, WHITE, PINK, YELLOW, PINK, PURPLE, WHITE, WHITE, ORANGE, ORANGE, PINK, PURPLE, PURPLE, WHITE],
               "king" : [RED, YELLOW, BLUE, PINK, BLUE, PINK, RED, RED, PINK, BLUE, BLUE, GREEN, RED, PURPLE, PURPLE],
-              "teen" : [],
               "robinHood" : [ORANGE, PURPLE, ORANGE, ORANGE, PINK, WHITE, ORANGE, YELLOW, YELLOW, GREEN, RED, WHITE, PURPLE, PINK, PURPLE],
               "lgbt" : [BLUE, BLUE, BLUE, WHITE, RED, WHITE, WHITE, BLUE, WHITE, BLUE, WHITE, YELLOW, WHITE, YELLOW, BLUE],
               "adam" : [PINK, PURPLE, YELLOW, PURPLE, RED, RED, PINK, PINK, ORANGE, PURPLE, PINK, PINK, RED, WHITE, WHITE],
@@ -78,7 +74,7 @@ var frames = {"romeoAndJuliet" : [RED, RED, RED, PINK, PINK, GREEN, GREEN, ORANG
               "partizans" : [BLUE, BLUE, GREEN, ORANGE, WHITE, RED, PURPLE, WHITE, RED, WHITE, PINK, PINK, WHITE, PINK, WHITE]
 };
 var activeBtns = [];
-var matches = ["romeoAndJuliet", "blackFlags", "rosaParks", "cotege", "arabSpring", "hippies", "king", "teen",
+var matches = ["romeoAndJuliet", "blackFlags", "rosaParks", "cotege", "arabSpring", "hippies", "king",
 "robinHood", "lgbt", "adam", "suffragette", "sparta", "partizans"];
 let body = document.getElementsByTagName("BODY")[0];
 body.style.overflow = "hidden";
