@@ -91,28 +91,28 @@ input[type="image"]:focus {
 
 .nevigation {
   position: fixed;
-  height:23vw;
-  margin: 3vh 3vw;
+  height:340px;
+  margin: 25px 43px;
   right: 0;
   z-index: 9997;
 }
 
 #next {
-  right: 60vw;
+  right: 864px;
 }
 
 #resultHeaders {
   margin-top: 4vh;
   position: fixed;
   z-index: 9996;
-  right: 30vw;
+  right: 432px;
   text-align: right;
   color: blue;
   display: block;
   overflow-wrap: break-word;
   word-wrap: break-word;
   hyphens: auto;
-  max-width: 38vw; 
+  max-width: 547px; 
   pointer-events: none;
 }
 
@@ -144,7 +144,7 @@ input[type="image"]:focus {
   font-weight: Bolder;
   font-size: 15pt;
   direction: rtl;
-  max-width: 32vw; 
+  max-width: 460px; 
   float: right;
 
 }
