@@ -63,7 +63,7 @@ var hebrewNames = {"romeoAndJuliet" : "רומיאו,ויוליה", "blackFlags" 
 "teen" : "מרד,נעורים", "robinHood" : "רובין,הוד", "lgbt" : "מחאת,הלהט״ב", "adam" : "אדם,וחווה", 
 "suffragette" : "<br/>סופרג׳יזם", "sparta" : "<br/>ספרטה", "partizans" : "<br/>פרטיזנים"};
 var frames = {"romeoAndJuliet" : [RED, RED, RED, PINK, PINK, GREEN, GREEN, ORANGE, ORANGE, ORANGE, ORANGE, ORANGE, ORANGE, ORANGE, YELLOW],
-              "blackFlags" : [BLUE, BLUE, RED, RED, BLUE, PINK, PINK, WHITE, WHITE, WHITE, BLUE, BLUE, BLUE, WHITE, YELLOW],
+              "blackFlags" : [RED, RED, RED, RED, BLUE, PINK, PINK, WHITE, WHITE, WHITE, BLUE, BLUE, BLUE, WHITE, YELLOW],
               "rosaParks" : [RED, RED, PINK, PINK, WHITE, WHITE, WHITE, WHITE, WHITE, GREEN, ORANGE, YELLOW, YELLOW, BLUE, BLUE],
               "cotege" : [RED, RED, RED, RED, PINK, WHITE, WHITE, WHITE, WHITE, WHITE, WHITE, WHITE, BLUE, BLUE, BLUE],
               "arabSpring" : [YELLOW, PINK, BLUE, YELLOW, PINK, GREEN, PINK, BLUE, BLUE, BLUE, ORANGE, YELLOW, BLUE, PINK, BLUE],
@@ -278,8 +278,6 @@ var cover = document.getElementById("cover");
 
 let oneLineHeaders = ["partizans", "suffragette", "sparta"];
 let upperNames = ["romeoAndJuliet", "king", "lgbt"];
-let lowerNames = ["rosaParks"];
-let rightNames = ["suffragette"];
 function setResultHeaders(percentage, rabelName) {
     var roundPercentage = Math.round(percentage * 100);
     document.getElementById("percentage").innerHTML = "את.ה " + roundPercentage + "%";
@@ -294,26 +292,30 @@ function setResultHeaders(percentage, rabelName) {
       rabelName2.innerHTML = hebrewNames[rabelName];
       rabelName1.innerHTML = "";
     }
-    if (lowerNames.includes(currentMatch)) {
+    rabelName2.style.lineHeight = "100px";
+    rabelName2.style.marginBottom = "auto";
+    desc.style.paddingTop = "10px";
+    rabelName2.style.transform = "translateX(0)";
+    rabelName1.style.transform = "translateY(0)";
+    if (currentMatch == "rosaParks") {
       rabelName2.style.lineHeight = "80px";
       rabelName2.style.marginBottom = "20px";
-      desc.style.paddingTop = "10px";
-      rabelName2.style.transform = "translateX(0)";
-    } else if (upperNames.includes(currentMatch)){
+    } 
+    if (currentMatch == "king") {
+      rabelName2.style.marginBottom = "10px";
+      rabelName1.style.transform = "translateY(-10px)";
+    }
+    if (upperNames.includes(currentMatch)){
       rabelName2.style.lineHeight = "120px";
-      rabelName2.style.marginBottom = "auto";
-      desc.style.paddingTop = "0";
-      rabelName2.style.transform = "translateX(0)";
-    } else if (rightNames.includes(currentMatch)){
-      rabelName2.style.lineHeight = "100px";
-      rabelName2.style.marginBottom = "auto";
-      desc.style.paddingTop = "10px";
+    } 
+    if (currentMatch == "cotege"){
+      rabelName2.style.marginBottom = "20px";
+    } 
+    if (currentMatch == "suffragette"){
       rabelName2.style.transform = "translateX(20px)";
-    } else {
-      rabelName2.style.lineHeight = "100px";
-      rabelName2.style.marginBottom = "auto";
-      desc.style.paddingTop = "10px";
-      rabelName2.style.transform = "translateX(0)";
+    } 
+    if (currentMatch == "hippies") {
+      rabelName1.style.transform = "translateY(5px)";
     }
     desc.innerHTML = descriptions[rabelName];
 }
@@ -362,7 +364,7 @@ function addItem(id, isBottom) {
   item.style.outline = "3px solid " + itemColor;
   div.style.zIndex = 9990;
   div.style.position = "relative";
-  item.style.transform = translateRotate(-40, 40, 0, 150, -8, 8);
+  item.style.transform = translateRotate(-35, 35, 0, 150, -8, 8);
   item.style.width = (10 * getRndInteger(2, 4)).toString() + "vw";
   item.addEventListener('mouseenter', function() {
     item.style.outline = "12px solid" + itemColor;
