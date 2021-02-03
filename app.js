@@ -38,8 +38,6 @@ var resultPages = {
   "suffragetteVideos" : ["1", "2", "3", "9", "10", "11", "12"],
   "sparta" : ["02w", "05w", "07w", "08w", "09w", "13w", "24w"],
   "spartaVideos" : ["1", "3", "4", "5", "6"],
-  "studentsFrance" : ["02w", "03w", "04w", "09w", "10w", "14w", "17w", "22w",],
-  "studentsFranceVideos" : [],
   "partizans" : ["02w", "04w", "07w", "09w", "11w", "13w", "19w", "23w", "23w"],
   "partizansVideos" : ["3", "5", "6", "7", "8", "9"]
   }
@@ -48,23 +46,22 @@ var descriptions = {
   "romeoAndJuliet" : "מרד רומנטי של זוג מול משפחותיהם היהירות, שבירת מסגרות נוקשות ושמרניות והקרבה עצמית למען האהבה.",
   "blackFlags" : "כשציבור מחליט לקום ולהפגין מדי יום ביומו, באזורים נרחבים ברחבי הארץ, לסיום כהונתו הארוכה של ראש הממשלה.",
   "rosaParks" : "כשאישה מחליטה לקום ולעשות מעשה, או יותר נכון לשבת, אל מול חוסר צדק ושיוויון חברתי על בסיס צבע עור וגזע.",
-  "cotege" : "התנגדות ליוקר המחייה ומאבק בזכות לקיום בסיסי בכבוד.",
+  "cotege" : "מחאה נרחבת ליצירת סטנדרט כלכלי אחיד, להפחתת עול יוקר המחייה והזכות לקיום בסיסי אישי, משפחתי וקהילתי בכבוד.",
   "arabSpring" : "מהפכה חוצית מדינות כנגד שחיתות שלטונית, זכויות היסוד ואורח החיים של האזרחים, והתנגדות לשלטון טוטליטרי.",
-  "hippies" : "מרד הקורא נגד מלחמה, אלימות, שמרנות וצרכנות. אמונה בטבע האדם, במוזיקה, ובאהבה.",
-  "king" : "סירוב לקבל אפליה על רקע גזעי, מלחמה על זכויות החופש הבסיסיות של כל אדם באשר הוא.",
+  "hippies" : "מרד הקורא נגד מלחמה, שמרנות וצרכנות. אמונה בטבע הטוב של האדם, במוזיקה חוצת גבולות, ובאהבה מינית ורומנטית.",
+  "king" : "סירוב לקבל אפליה על רקע גזעי, מלחמה על זכויות החופש הבסיסיות של כל אדם באשר הוא, ויוצרת מחאה בכוח המילה.",
   "teen" : "",
-  "robinHood" : "אומץ לב ואמונה בשיוויון וצדקם של חלשים, גם במחיר של שבירת חוקים ומסגרות.",
-  "lgbt" : "מאבק נגד חוקי ממשלה שמרנים המונעים שיוויון לכלל האזרחים על בסיס הנטייה המינית שלהם.",
+  "robinHood" : "לקיחת החוק לידיים ויצירת צדק חברתי וקהילתי אלטרנטיבי, לטובת מענק הזדמנויות שווה לכל שכבות האוכלוסיה.",
+  "lgbt" : "מאבק של קהילה ותומכיה כנגד חוקי ממשלה שמרנים המונעים שיוויון לכלל האזרחים על בסיס הנטייה מינית.",
   "adam" : "מרד אישי, אי קבלת מרות, פיתוי ושבירת חוקים ומוסכמות, וזאת מבלי לדעת מה יהיו ההשלכות של החלטה שכזאת.",
-  "suffragette" : "כשקהילת נשים יוצאת נגד חוסר שיוויון מגדרי, ועושה היסטוריה.",
+  "suffragette" : "כשקהילת נשים יוצאת להיאבק למען זכות ההצבעה, כסמל לחוסר שיוויון מגדרי, ויוצרת הד עולמי שעשה היסטוריה.",
   "sparta" : "מלחמתו של עם עיקש, חזק ואמיץ למול כובשים גדולים בהרבה, ואימוץ אורח חיים ייחודי וקיצוני משאר המדינה.",
-  "studentsFrance" : "",
   "partizans" : "התנגדות של מעטים מול רבים, עם אמצעים דלים ונחישות אדירה, למען הצלת האחר גם במחיר של הקרבה עצמית."
 }
 var hebrewNames = {"romeoAndJuliet" : "רומיאו,ויוליה", "blackFlags" : "הדגלים,השחורים", "rosaParks" : "רוזה,פארקס",
-"cotege" : "מחאת,הקוטג׳", "arabSpring" : "האביב,הערבי", "hippies" : "ילדי,הפרחים", "king" : "מרתין,לותר קינג", 
+"cotege" : "מחאת,הקוטג׳", "arabSpring" : "האביב,הערבי", "hippies" : "ילדי,הפרחים", "king" : "מרטין,לותר קינג", 
 "teen" : "מרד,נעורים", "robinHood" : "רובין,הוד", "lgbt" : "מחאת,הלהט״ב", "adam" : "אדם,וחווה", 
-"suffragette" : "<br/>סופרג׳יזם", "sparta" : "<br/>ספרטה", "studentsFrance" : "מאי,1968", "partizans" : "<br/>פרטיזנים"};
+"suffragette" : "<br/>סופרג׳יזם", "sparta" : "<br/>ספרטה", "partizans" : "<br/>פרטיזנים"};
 var frames = {"romeoAndJuliet" : [RED, RED, RED, PINK, PINK, GREEN, GREEN, ORANGE, ORANGE, ORANGE, ORANGE, ORANGE, ORANGE, ORANGE, YELLOW],
               "blackFlags" : [BLUE, BLUE, RED, RED, BLUE, PINK, PINK, WHITE, WHITE, WHITE, BLUE, BLUE, BLUE, WHITE, YELLOW],
               "rosaParks" : [RED, RED, PINK, PINK, WHITE, WHITE, WHITE, WHITE, WHITE, GREEN, ORANGE, YELLOW, YELLOW, BLUE, BLUE],
@@ -78,12 +75,11 @@ var frames = {"romeoAndJuliet" : [RED, RED, RED, PINK, PINK, GREEN, GREEN, ORANG
               "adam" : [PINK, PURPLE, YELLOW, PURPLE, RED, RED, PINK, PINK, ORANGE, PURPLE, PINK, PINK, RED, WHITE, WHITE],
               "suffragette" : [PINK, ORANGE, BLUE, BLUE, WHITE, WHITE, WHITE, WHITE, PINK, BLUE, PURPLE, RED, PURPLE, PINK, BLUE],
               "sparta" : [YELLOW, PURPLE, WHITE, RED, ORANGE, RED, RED, YELLOW, PINK, PINK, PINK, YELLOW, PINK, WHITE, GREEN],
-              "studentsFrance" : [],
               "partizans" : [BLUE, BLUE, GREEN, ORANGE, WHITE, RED, PURPLE, WHITE, RED, WHITE, PINK, PINK, WHITE, PINK, WHITE]
 };
 var activeBtns = [];
 var matches = ["romeoAndJuliet", "blackFlags", "rosaParks", "cotege", "arabSpring", "hippies", "king", "teen",
-"robinHood", "lgbt", "adam", "suffragette", "sparta", "studentsFrance", "partizans"];
+"robinHood", "lgbt", "adam", "suffragette", "sparta", "partizans"];
 let body = document.getElementsByTagName("BODY")[0];
 body.style.overflow = "hidden";
 
@@ -280,18 +276,36 @@ var menu = document.getElementById("menu");
 var cover = document.getElementById("cover");
 
 let oneLineHeaders = ["partizans", "suffragette", "sparta"];
+let upperNames = ["romeoAndJuliet", "king", "lgbt"];
+let lowerNames = ["rosaParks"];
 function setResultHeaders(percentage, rabelName) {
     var roundPercentage = Math.round(percentage * 100);
     document.getElementById("percentage").innerHTML = "את.ה " + roundPercentage + "%";
+    let rabelName1 = document.getElementById("rabelName1");
+    let rabelName2 = document.getElementById("rabelName2");
+    let desc = document.getElementById("description");
     if (!oneLineHeaders.includes(currentMatch)) {
       let currentStr = hebrewNames[rabelName].split(",");
-      document.getElementById("rabelName1").innerHTML = currentStr[0];
-      document.getElementById("rabelName2").innerHTML = currentStr[1];
+      rabelName1.innerHTML = currentStr[0];
+      rabelName2.innerHTML = currentStr[1];
     } else {
-      document.getElementById("rabelName2").innerHTML = hebrewNames[rabelName];
-      document.getElementById("rabelName1").innerHTML = "";
+      rabelName2.innerHTML = hebrewNames[rabelName];
+      rabelName1.innerHTML = "";
     }
-    document.getElementById("description").innerHTML = descriptions[rabelName];
+    if (lowerNames.includes(currentMatch)) {
+      rabelName2.style.lineHeight = "80px";
+      rabelName2.style.marginBottom = "20px";
+      desc.style.paddingTop = "10px";
+    } else if (upperNames.includes(currentMatch)){
+      rabelName2.style.lineHeight = "120px";
+      rabelName2.style.marginBottom = "auto";
+      desc.style.paddingTop = "0";
+    } else {
+      rabelName2.style.lineHeight = "100px";
+      rabelName2.style.marginBottom = "auto";
+      desc.style.paddingTop = "10px";
+    }
+    desc.innerHTML = descriptions[rabelName];
 }
 
 function createVideoElem() {
