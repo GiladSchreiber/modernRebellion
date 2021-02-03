@@ -279,6 +279,7 @@ var cover = document.getElementById("cover");
 let oneLineHeaders = ["partizans", "suffragette", "sparta"];
 let upperNames = ["romeoAndJuliet", "king", "lgbt"];
 let lowerNames = ["rosaParks"];
+let rightNames = ["suffragette"];
 function setResultHeaders(percentage, rabelName) {
     var roundPercentage = Math.round(percentage * 100);
     document.getElementById("percentage").innerHTML = "את.ה " + roundPercentage + "%";
@@ -297,14 +298,22 @@ function setResultHeaders(percentage, rabelName) {
       rabelName2.style.lineHeight = "80px";
       rabelName2.style.marginBottom = "20px";
       desc.style.paddingTop = "10px";
+      rabelName2.style.transform = "translateX(0)";
     } else if (upperNames.includes(currentMatch)){
       rabelName2.style.lineHeight = "120px";
       rabelName2.style.marginBottom = "auto";
       desc.style.paddingTop = "0";
+      rabelName2.style.transform = "translateX(0)";
+    } else if (rightNames.includes(currentMatch)){
+      rabelName2.style.lineHeight = "100px";
+      rabelName2.style.marginBottom = "auto";
+      desc.style.paddingTop = "10px";
+      rabelName2.style.transform = "translateX(20px)";
     } else {
       rabelName2.style.lineHeight = "100px";
       rabelName2.style.marginBottom = "auto";
       desc.style.paddingTop = "10px";
+      rabelName2.style.transform = "translateX(0)";
     }
     desc.innerHTML = descriptions[rabelName];
 }
