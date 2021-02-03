@@ -59,9 +59,9 @@ var descriptions = {
   "partizans" : "התנגדות של מעטים מול רבים, עם אמצעים דלים ונחישות אדירה, למען הצלת האחר גם במחיר של הקרבה עצמית."
 }
 var hebrewNames = {"romeoAndJuliet" : "רומיאו,ויוליה", "blackFlags" : "הדגלים,השחורים", "rosaParks" : "רוזה,פארקס",
-"cotege" : "מחאת,הקוטג׳", "arabSpring" : "האביב,הערבי", "hippies" : "ילדי,הפרחים", "king" : "מרטין,לותר קינג", 
+"cotege" : "מחאת,הקוטג׳", "arabSpring" : "האביב,הערבי", "hippies" : "ילדי,הפרחים", "king" : "ד״ר מרטין,לותר קינג", 
 "teen" : "מרד,נעורים", "robinHood" : "רובין,הוד", "lgbt" : "מחאת,הלהט״ב", "adam" : "אדם,וחווה", 
-"suffragette" : "<br/>סופרג׳יזם", "sparta" : "<br/>ספרטה", "partizans" : "<br/>פרטיזנים"};
+"suffragette" : "תנועת,הסופרג׳יזם", "sparta" : "הצבא,הספרטני", "partizans" : "מחתרת,הפרטיזנים"};
 var frames = {"romeoAndJuliet" : [RED, RED, RED, PINK, PINK, GREEN, GREEN, ORANGE, ORANGE, ORANGE, ORANGE, ORANGE, ORANGE, ORANGE, YELLOW],
               "blackFlags" : [RED, RED, RED, RED, BLUE, PINK, PINK, WHITE, WHITE, WHITE, BLUE, BLUE, BLUE, WHITE, YELLOW],
               "rosaParks" : [RED, RED, PINK, PINK, WHITE, WHITE, WHITE, WHITE, WHITE, GREEN, ORANGE, YELLOW, YELLOW, BLUE, BLUE],
@@ -276,7 +276,6 @@ var resDesc = document.getElementById("resDesc");
 var menu = document.getElementById("menu");
 var cover = document.getElementById("cover");
 
-let oneLineHeaders = ["partizans", "suffragette", "sparta"];
 let upperNames = ["romeoAndJuliet", "king", "lgbt"];
 function setResultHeaders(percentage, rabelName) {
     var roundPercentage = Math.round(percentage * 100);
@@ -284,26 +283,26 @@ function setResultHeaders(percentage, rabelName) {
     let rabelName1 = document.getElementById("rabelName1");
     let rabelName2 = document.getElementById("rabelName2");
     let desc = document.getElementById("description");
-    if (!oneLineHeaders.includes(currentMatch)) {
-      let currentStr = hebrewNames[rabelName].split(",");
-      rabelName1.innerHTML = currentStr[0];
-      rabelName2.innerHTML = currentStr[1];
-    } else {
-      rabelName2.innerHTML = hebrewNames[rabelName];
-      rabelName1.innerHTML = "";
-    }
+    let currentStr = hebrewNames[rabelName].split(",");
+    rabelName1.innerHTML = currentStr[0];
+    rabelName2.innerHTML = currentStr[1];
     rabelName2.style.lineHeight = "100px";
     rabelName2.style.marginBottom = "auto";
     desc.style.paddingTop = "10px";
-    rabelName2.style.transform = "translateX(0)";
-    rabelName1.style.transform = "translateY(0)";
+    rabelName1.style.transform = "translate(0, 0)";
+    rabelName2.style.transform = "translate(0, 0)";
+    rabelName1.style.fontSize = "100pt";
+    rabelName2.style.fontSize = "100pt";
     if (currentMatch == "rosaParks") {
       rabelName2.style.lineHeight = "80px";
       rabelName2.style.marginBottom = "20px";
     } 
     if (currentMatch == "king") {
-      rabelName2.style.marginBottom = "10px";
-      rabelName1.style.transform = "translateY(-10px)";
+      rabelName1.style.transform = "translate(10px, -10px)";
+      rabelName2.style.transform = "translate(10px, -20px)";
+      rabelName1.style.fontSize = "90pt";
+      rabelName2.style.fontSize = "90pt";
+      desc.style.paddingTop = "0px";
     }
     if (upperNames.includes(currentMatch)){
       rabelName2.style.lineHeight = "120px";
@@ -312,10 +311,15 @@ function setResultHeaders(percentage, rabelName) {
       rabelName2.style.marginBottom = "20px";
     } 
     if (currentMatch == "suffragette"){
-      rabelName2.style.transform = "translateX(20px)";
+      rabelName1.style.fontSize = "85pt";
+      rabelName2.style.fontSize = "85pt";
     } 
     if (currentMatch == "hippies") {
       rabelName1.style.transform = "translateY(5px)";
+    }
+    if (currentMatch == "partizans") {
+      rabelName1.style.fontSize = "90pt";
+      rabelName2.style.fontSize = "90pt";
     }
     desc.innerHTML = descriptions[rabelName];
 }

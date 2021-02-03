@@ -278,7 +278,7 @@ button {
     padding: 0em 0.5em 0.1em 0.5em;
 	margin: 2vh 3vw;
     transition: background-color 500ms ease, color 1000ms ease;
-    z-index: 9999;
+    z-index: 9998;
 }
 
 button:hover {
@@ -290,16 +290,19 @@ button:hover {
 
 button:focus {
 	outline: none;
+  z-index: 9999;
 }
 
 .non-active {
 	background-color: white;
 	color: blue;
+  z-index: 9998;
 }
 
 .active {
 	background-color: blue;
 	color: white;
+  z-index: 9999;
 }
 
 
